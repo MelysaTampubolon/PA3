@@ -10303,3 +10303,36 @@ a.soldProduct:hover {
 .soldProductBorder {
     border-left: 0.25rem solid #B84A4A !important;
 }
+.transactionAmount {
+     font-weight: 800;
+     color: #FFE666 !important;
+ }
+a.transactionAmount:focus,
+a.transactionAmount:hover {
+    color: #FFE666 !important;
+}
+.transactionAmountBorder {
+    border-left: 0.25rem solid #FFE666 !important;
+}
+.productAmount {
+    font-weight: 800;
+    color: #00529A !important;
+}
+a.productAmount:focus,
+a.productAmount:hover {
+    color: #00529A !important;
+}
+.productAmountBorder {
+    border-left: 0.25rem solid #00529A !important;
+}
+.supplierAmount {
+    font-weight: 800;
+    color: #86f3a7 !important;
+}
+a.supplierAmount:focus,
+a.supplierAmount:hover {
+    color: #86f3a7 !important;
+}
+.supplierAmountBorder {
+    border-left: 0.25rem solid #86f3a7 !important;
+}
