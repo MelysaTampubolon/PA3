@@ -43,7 +43,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item {{(request()->is('/') ? 'active' : '')}}">
-            <a class="nav-link" href="{{url('/dashboard')}}">
+            <a class="nav-link" href="{{url('/')}}">
                 <img src=" @if(request()->is('/'))
                                 {{url('icon/dashboard_icon_active.png')}}
                             @else()
