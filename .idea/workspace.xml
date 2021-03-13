@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e39b9a1-53d4-4274-a8bb-e50b377f2d61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +153,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/icon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -162,6 +162,7 @@
       <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy\public" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy" />
       <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy\public\icon" />
       <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy\resources\icon" />
       <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy\public\templateResources" />
@@ -185,7 +186,7 @@
       <workItem from="1615554607265" duration="2518000" />
       <workItem from="1615614642110" duration="90000" />
       <workItem from="1615614814723" duration="3556000" />
-      <workItem from="1615618418147" duration="11465000" />
+      <workItem from="1615618418147" duration="11872000" />
     </task>
     <servers />
   </component>
@@ -205,10 +206,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2326" y="150" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615554693247">
+    <state x="2326" y="150" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615630088410">
       <screen x="1920" y="0" width="1280" height="720" />
     </state>
-    <state x="2326" y="150" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720/1920.0.1280.720@1920.0.1280.720" timestamp="1615554693247" />
+    <state x="2326" y="150" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720/1920.0.1280.720@1920.0.1280.720" timestamp="1615630088410" />
     <state x="2240" y="96" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1615614664644">
       <screen x="1920" y="0" width="1280" height="720" />
     </state>
