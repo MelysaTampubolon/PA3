@@ -1445,6 +1445,12 @@ pre code {
     margin-bottom: 1rem;
     color: #858796;
 }
+.table td{
+    font-size: 12pt;
+}
+.table td a:hover{
+    text-decoration: none;
+}
 .table td,
 .table th {
     padding: 0.75rem;
@@ -2227,8 +2233,9 @@ fieldset:disabled a.btn {
 }
 .btn-primary {
     color: #fff;
-    background-color: #4e73df;
-    border-color: #4e73df;
+    font-weight: bold;
+    background-color: #F28F18;
+    border-color: #F28F18;
 }
 .btn-primary:hover {
     color: #fff;
@@ -2407,8 +2414,8 @@ fieldset:disabled a.btn {
 }
 .btn-danger:hover {
     color: #fff;
-    background-color: #e02d1b;
-    border-color: #d52a1a;
+    background-color: #a52a1c;
+    border-color: #a52a1c;
 }
 .btn-danger.focus,
 .btn-danger:focus {
@@ -3011,7 +3018,7 @@ input[type="submit"].btn-block {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #4e73df;
+    background-color: #000000;
 }
 .dropdown-item.disabled,
 .dropdown-item:disabled {
@@ -4367,14 +4374,23 @@ input[type="submit"].btn-block {
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
+    /*padding: 0.75rem 1rem;*/
+    margin-bottom: 0.1rem;
     list-style: none;
-    background-color: #eaecf4;
-    border-radius: 0.35rem;
+    font-size: 10pt;
 }
 .breadcrumb-item {
     display: flex;
+    color: #FFB895;
+}
+.breadcrumb-item:hover {
+    text-decoration: none;
+    color: #F49426;
+}
+.breadcrumb-item .fas {
+    margin-top: 3px;
+    color: #FFB895;
+    margin-right: 5px;
 }
 .breadcrumb-item + .breadcrumb-item {
     padding-left: 0.5rem;
@@ -4386,7 +4402,7 @@ input[type="submit"].btn-block {
     content: "/";
 }
 .breadcrumb-item + .breadcrumb-item:hover::before {
-    text-decoration: underline;
+    text-decoration: none;
 }
 .breadcrumb-item + .breadcrumb-item:hover::before {
     text-decoration: none;
@@ -9422,7 +9438,7 @@ a:focus {
     display: block;
 }
 .sidebar .nav-item.active .nav-link {
-    font-weight: 700;
+    font-weight: 600;
 }
 .sidebar .nav-item .collapse {
     position: absolute;
@@ -9749,7 +9765,7 @@ a:focus {
     color: #fff;
 }
 .sidebar-dark .nav-item .nav-link[data-toggle="collapse"]::after {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
 }
 .sidebar-dark .nav-item.active .nav-link {
     color: #FFB895;
@@ -10282,6 +10298,7 @@ body.sidebar-toggled footer.sticky-footer {
     width: 100%;
 }
 .page-head-title {
+    font-weight: bold;
     color: #ffb895;
 }
 .navIcon{
@@ -10335,4 +10352,90 @@ a.supplierAmount:hover {
 }
 .supplierAmountBorder {
     border-left: 0.25rem solid #86f3a7 !important;
+}
+.nav-linkDrop {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+.nav-linkDrop:focus,
+.nav-linkDrop:hover {
+    text-decoration: none;
+}
+.nav-linkDrop.disabled {
+    color: #858796;
+    pointer-events: none;
+    cursor: default;
+}
+.sidebar-dark .nav-item .nav-linkDrop {
+    color: #ffffff;
+}
+.sidebar-dark .nav-item .nav-linkDrop i {
+    color: #ffffff;
+}
+.sidebar-dark .nav-item .nav-linkDrop:active,
+.sidebar-dark .nav-item .nav-linkDrop:focus,
+.sidebar-dark .nav-item .nav-linkDrop:hover {
+    color: #fff;
+}
+.sidebar-dark .nav-item .nav-linkDrop:active i,
+.sidebar-dark .nav-item .nav-linkDrop:focus i,
+.sidebar-dark .nav-item .nav-linkDrop:hover i {
+    color: #fff;
+}
+.sidebar-dark .nav-item .nav-linkDrop[data-toggle="collapse"]::after {
+    color: #000000;
+}
+.sidebar-dark .nav-item.active .nav-linkDrop {
+    color: #FFB895;
+    background-color: #ffffff;
+}
+.sidebar-dark .nav-item.active .nav-linkDrop i {
+    color: #FFB895;
+}
+.sidebar .nav-item .nav-linkDrop {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    width: 14rem;
+}
+.sidebar .nav-item .nav-linkDrop i {
+    font-size: 13pt;
+    margin-right: 0.25rem;
+}
+.sidebar .nav-item .nav-linkDrop span {
+    margin-left: 5px;
+    font-size: 12pt;
+    display: inline;
+}
+.sidebar .nav-item .nav-linkDrop[data-toggle="collapse"]::after {
+    width: 1rem;
+    text-align: center;
+    float: right;
+    vertical-align: 0;
+    border: 0;
+    font-weight: 900;
+    content: "\f107";
+    color: #FFB895;
+    font-family: "Font Awesome 5 Free";
+}
+.sidebar .nav-item .nav-linkDrop[data-toggle="collapse"].collapsed::after {
+    content: "\f105";
+    color: #FFB895;
+}
+.sidebar .nav-item.active .nav-linkDrop {
+    font-weight: 600;
+}
+.btnAdd{
+    margin-left: 300px;
+}
+.btnAdd:hover{
+    background-color: #FFB895;
+    border: #FFB895 ;
+}
+.detailTable, th, td{
+    padding: 5px;
+}
+.detailTable{
+    border-spacing: 15px;
 }

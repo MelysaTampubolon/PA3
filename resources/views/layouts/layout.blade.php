@@ -20,9 +20,18 @@
     <!-- Custom styles for this template-->
     <link href="{{url('templateResources/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
+    <!-- Custom styles for this page -->
+    <link href="{{url('templateResources/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
+
+@if(\Illuminate\Support\Facades\Session::has('username'))
+
+@else
+    <script>window.location = "/login";</script>
+@endif
 
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -37,6 +46,8 @@
             </div>
             <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
         </a>
+
+        @if(\Illuminate\Support\Facades\Session::get('roles') == 'user')
 
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
@@ -54,42 +65,63 @@
         </li>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <img src="{{url('icon/fetch_icon.png')}}" class="navIcon">
-                <span>Fetch Data Barang</span>
+        <li class="nav-item {{(request()->is('sumberData') ? 'active' : '')}}">
+            <a class="nav-link" href="{{url('/sumberData')}}">
+                <img src="@if(request()->is('sumberData'))
+                    {{url('icon/fetch_icon_active.png')}}
+                    @else()
+                    {{url('icon/fetch_icon.png')}}
+                    @endif
+                " class="navIcon">
+                <span>Sumber Data Barang</span>
             </a>
         </li>
 
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
-                <img src="{{url('icon/product_icon.png')}}" class="navIcon">
+        <li class="nav-item {{(request()->is('showProduk') ? 'active' : '')}}">
+            <a class="nav-link collapsed" href="{{url('/showProduk')}}">
+                <img src="@if(request()->is('showProduk'))
+                    {{url('icon/product_icon_active.png')}}
+                    @else()
+                    {{url('icon/product_icon.png')}}
+                    @endif
+                " class="navIcon">
                 <span>Produk</span>
             </a>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
-                <img src="{{url('icon/transaction_icon.png')}}" class="navIcon">
+        <li class="nav-item  {{(request()->is('showTransaksi') ? 'active' : '')}}">
+            <a class="nav-link collapsed" href="{{url('/showTransaksi')}}">
+                <img src="@if(request()->is('showTransaksi'))
+                {{url('icon/transaction_icon_active.png')}}
+                @else()
+                {{url('icon/transaction_icon.png')}}
+                @endif
+                    " class="navIcon">
                 <span>Transaksi</span>
             </a>
         </li>
 
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-               aria-expanded="true" aria-controls="collapsePages">
-                <img src="{{url('icon/masterTable_icon.png')}}" class="navIcon">
-                <span>Tabel Master</span>
-            </a>
-            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="login.html">Config</a>
-                    <a class="collapse-item" href="register.html">Supplier</a>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item {{(request()->is('showConfig', 'showSupplier', 'showShop') ? 'active' : '')}}">
+                <a class="{{(request()->is('showConfig', 'showSupplier', 'showShop') ? 'nav-linkDrop' : 'nav-link')}} collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                   aria-expanded="true" aria-controls="collapsePages">
+                    <img src="@if(request()->is('showConfig', 'showSupplier', 'showShop'))
+                    {{url('icon/masterTable_icon_active.png')}}
+                    @else()
+                    {{url('icon/masterTable_icon.png')}}
+                    @endif
+                        " class="navIcon">
+                    <span>Tabel Master</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{url('/showConfig')}}">Config</a>
+                        <a class="collapse-item" href="{{url('/showSupplier')}}">Supplier</a>
+                        <a class="collapse-item" href="{{url('/showShop')}}">Toko Online</a>
+                    </div>
                 </div>
-            </div>
-        </li>
+            </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -101,6 +133,104 @@
 
     </ul>
     <!-- End of Sidebar -->
+
+    @else
+        <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item {{(request()->is('/') ? 'active' : '')}}">
+                <a class="nav-link" href="{{url('/')}}">
+                    <img src=" @if(request()->is('/'))
+                    {{url('icon/dashboard_icon_active.png')}}
+                    @else()
+                    {{url('icon/dashboard_icon.png')}}
+                    @endif
+                        " class="navIcon">
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item {{(request()->is('sumberData') ? 'active' : '')}}">
+                <a class="nav-link" href="{{url('/sumberData')}}">
+                    <img src="@if(request()->is('sumberData'))
+                    {{url('icon/fetch_icon_active.png')}}
+                    @else()
+                    {{url('icon/fetch_icon.png')}}
+                    @endif
+                        " class="navIcon">
+                    <span>Sumber Data Barang</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item {{(request()->is('showProduk') ? 'active' : '')}}">
+                <a class="nav-link collapsed" href="{{url('/showProduk')}}">
+                    <img src="@if(request()->is('showProduk'))
+                    {{url('icon/product_icon_active.png')}}
+                    @else()
+                    {{url('icon/product_icon.png')}}
+                    @endif
+                        " class="navIcon">
+                    <span>Produk</span>
+                </a>
+            </li>
+
+            <li class="nav-item  {{(request()->is('showTransaksi') ? 'active' : '')}}">
+                <a class="nav-link collapsed" href="{{url('/showTransaksi')}}">
+                    <img src="@if(request()->is('showTransaksi'))
+                    {{url('icon/transaction_icon_active.png')}}
+                    @else()
+                    {{url('icon/transaction_icon.png')}}
+                    @endif
+                        " class="navIcon">
+                    <span>Transaksi</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item {{(request()->is('showConfig', 'showSupplier', 'showShop') ? 'active' : '')}}">
+                <a class="{{(request()->is('showConfig', 'showSupplier', 'showShop') ? 'nav-linkDrop' : 'nav-link')}} collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                   aria-expanded="true" aria-controls="collapsePages">
+                    <img src="@if(request()->is('showConfig', 'showSupplier', 'showShop'))
+                        {{url('icon/masterTable_icon_active.png')}}
+                        @else()
+                        {{url('icon/masterTable_icon.png')}}
+                        @endif
+                    " class="navIcon">
+                    <span>Tabel Master</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{url('/showConfig')}}">Config</a>
+                        <a class="collapse-item" href="{{url('/showSupplier')}}">Supplier</a>
+                        <a class="collapse-item" href="{{url('/showShop')}}">Toko Online</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item {{(request()->is('showAkun') ? 'active' : '')}}">
+                <a class="nav-link collapsed" href="{{url('/showAkun')}}">
+                    <img src="@if(request()->is('showAkun'))
+                    {{url('icon/user_icon_active.png')}}
+                    @else()
+                    {{url('icon/user_icon.png')}}
+                    @endif
+                        " class="navIcon">
+                    <span>Kelola Akun</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            </ul>
+    @endif
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -119,57 +249,20 @@
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
 
-                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                    <li class="nav-item dropdown no-arrow d-sm-none">
-                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <!-- Dropdown - Messages -->
-                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                             aria-labelledby="searchDropdown">
-                            <form class="form-inline mr-auto w-100 navbar-search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control bg-light border-0 small"
-                                           placeholder="Search for..." aria-label="Search"
-                                           aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="fas fa-search fa-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-
                     <div class="topbar-divider d-none d-sm-block"></div>
 
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Melysa Sihombing</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{( \Illuminate\Support\Facades\Session::get('nama') )}} - {{(\Illuminate\Support\Facades\Session::get('roles'))}}</span>
                             <img class="img-profile rounded-circle"
                                  src="{{url('icon/user.png')}}">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Profile
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Settings
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Activity Log
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <a class="dropdown-item" href="{{url('logout')}}">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
                             </a>
@@ -183,6 +276,10 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
+
+                @if(session()->has('roles') == 'admin')
+
+                @endif
 
                 @yield('main-content')
 
@@ -227,7 +324,7 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
+                <a class="btn btn-primary" href="">Logout</a>
             </div>
         </div>
     </div>
@@ -249,6 +346,13 @@
 <!-- Page level custom scripts -->
 <script src="{{('templateResources/js/demo/chart-area-demo.js')}}"></script>
 <script src="{{('templateResources/js/demo/chart-pie-demo.js')}}"></script>
+
+<!-- Page level plugins -->
+<script src="{{url('templateResources/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{url('templateResources/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{{url('templateResources/js/demo/datatables-demo.js')}}"></script>
 
 </body>
 
