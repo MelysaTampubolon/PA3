@@ -53,7 +53,7 @@
                     <td>:</td>
                     <td>Alvin Simbolon - admin</td>
                 </tr>
-                <tr>
+                <tr>2
                     <th>Terakhir Diperbaharui</th>
                     <td>:</td>
                     <td>2011/04/25</td>

@@ -21,19 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7e39b9a1-53d4-4274-a8bb-e50b377f2d61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/PekanKuy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PekanKuy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templateResources/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/templateResources/css/sb-admin-2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templateResources/vendor/datatables/dataTables.bootstrap4.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/templateResources/vendor/datatables/dataTables.bootstrap4.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templateResources/vendor/datatables/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/templateResources/vendor/datatables/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/TokoOnline.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TokoOnline.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/akun/akun.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/akun/akun.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/onlineShop/toko.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/onlineShop/toko.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sumberData/detailSumberData.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sumberData/detailSumberData.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +201,10 @@
       <workItem from="1615658851272" duration="12017000" />
       <workItem from="1615722062290" duration="17332000" />
       <workItem from="1615803216217" duration="7292000" />
-      <workItem from="1615886539871" duration="24066000" />
+      <workItem from="1615886539871" duration="24378000" />
+      <workItem from="1615971368437" duration="601000" />
+      <workItem from="1615997858601" duration="5276000" />
+      <workItem from="1616003837929" duration="3471000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\TokoOnline;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
@@ -84,7 +87,8 @@ class PageController extends Controller
      */
     public function showShop()
     {
-        return view('onlineShop.toko');
+        $dataToko = DB::table('toko_online')->get();
+        return view('onlineShop.toko', compact('dataToko'));
     }
 
     /**
@@ -94,6 +98,7 @@ class PageController extends Controller
      */
     public function showAkun()
     {
-        return view('akun.akun');
+        $dataAkun = DB::table('user')->get();
+        return view('akun.akun', compact('dataAkun'));
     }
 }

@@ -33,6 +33,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
+                        <th>#</th>
                         <th>Username</th>
                         <th>Nama</th>
                         <th>Roles</th>
@@ -40,19 +41,22 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>user1</td>
-                        <td>Leonard Sihombing</td>
-                        <td>user</td>
-                        <td style="white-space: nowrap">
-                            <button href="" class="btn btn-danger">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                            <button href="" class="btn btn-info">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    @foreach($dataAkun as $row)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $row->username }}</td>
+                            <td>{{ $row->nama }}</td>
+                            <td>{{ $row->roles }}</td>
+                            <td style="white-space: nowrap">
+                                <button href="" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button href="" class="btn btn-info">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
