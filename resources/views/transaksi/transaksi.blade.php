@@ -51,11 +51,11 @@
                             <div href="" class="btn btn-success" style="pointer-events: none">
                                 <i class="">Done</i>
                             </div>
-                            <div href="" class="btn btn-dark" style="pointer-events: none">
-                                <i class="">On Process</i>
-                            </div>
-                            <div href="" class="btn btn-danger" style="pointer-events: none">
-                                <i class="">Cancelled</i>
+{{--                            <div href="" class="btn btn-dark" style="pointer-events: none">--}}
+{{--                                <i class="">On Process</i>--}}
+{{--                            </div>--}}
+{{--                            <div href="" class="btn btn-danger" style="pointer-events: none">--}}
+{{--                                <i class="">Cancelled</i>--}}
                             </div>
                         </td>
                         <td style="white-space: nowrap">

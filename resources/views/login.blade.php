@@ -1,3 +1,6 @@
+@if(\Illuminate\Support\Facades\Session::has('username'))
+    <script>window.location = "/";</script>
+@endif
 <!DOCTYPE html>
 <html lang="en">
 

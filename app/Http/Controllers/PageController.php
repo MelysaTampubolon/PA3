@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\TokoOnline;
+use App\Models\Supplier;
 use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
@@ -77,7 +78,8 @@ class PageController extends Controller
      */
     public function showSupplier()
     {
-        return view('supplier.supplier');
+        $dataSupplier = DB::table('supplier')->get();
+        return view('supplier.supplier', compact('dataSupplier'));
     }
 
     /**

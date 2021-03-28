@@ -17,7 +17,6 @@ class CreateSupplierTable extends Migration
             $table->id();
             $table->string('link');
             $table->string('nama_toko');
-            $table->string('nama_file');
             $table->timestamps();
         });
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Supplier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SupplierController extends Controller
 {
@@ -24,7 +25,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        //
+        return view('supplier.addSupplierForm');
     }
 
     /**
@@ -35,7 +36,22 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'link'=> 'required',
+            'nama_toko'=> 'required',
+        ]);
+
+        $query = DB::table('supplier')->insert([
+            'link'=>$request->input('link'),
+            'nama_toko'=>$request->input('nama_toko'),
+        ]);
+
+        if ($query){
+            return redirect('/showSupplier')->with('success', 'Data Disimpan');
+        }
+        else{
+            return redirect('/addSupplier')->with('error', 'Data yang ada masukkan salah.');
+        }
     }
 
     /**
@@ -55,9 +71,14 @@ class SupplierController extends Controller
      * @param  \App\Models\Supplier  $supplier
      * @return \Illuminate\Http\Response
      */
-    public function edit(Supplier $supplier)
+    public function edit($id)
     {
-        //
+        $row = DB::table('supplier')->where('id', $id)->first();
+        $dataSupplier = [
+            'dataSupplier'=>$row
+        ];
+
+        return view('supplier.editSupplierForm', $dataSupplier);
     }
 
     /**
@@ -67,9 +88,19 @@ class SupplierController extends Controller
      * @param  \App\Models\Supplier  $supplier
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Supplier $supplier)
+    public function update(Request $request)
     {
-        //
+        $request->validate([
+            'link'=> 'required',
+            'nama_toko'=> 'required',
+        ]);
+
+        $query = DB::table('supplier')->where('id', $request->input('dataID'))
+        ->update([
+            'link'=>$request->input('link'),
+            'nama_toko'=>$request->input('nama_toko'),
+        ]);
+        return redirect('/showSupplier')->with('success', 'Data Diubah');
     }
 
     /**
@@ -78,8 +109,9 @@ class SupplierController extends Controller
      * @param  \App\Models\Supplier  $supplier
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Supplier $supplier)
+    public function destroy($id)
     {
-        //
+        $delete = DB::table('supplier')->where('id', $id)->delete();
+        return redirect('/showSupplier')->with('success', 'Data Dihapus');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TokoOnline;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TokoOnlineController extends Controller
 {
@@ -24,7 +25,7 @@ class TokoOnlineController extends Controller
      */
     public function create()
     {
-        //
+        return view('onlineShop.addTokoForm');
     }
 
     /**
@@ -35,7 +36,22 @@ class TokoOnlineController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_toko'=> 'required',
+            'nama_platform'=> 'required',
+        ]);
+
+        $query = DB::table('toko_online')->insert([
+            'nama_toko'=>$request->input('nama_toko'),
+            'nama_platform'=>$request->input('nama_platform'),
+        ]);
+
+        if ($query){
+            return redirect('/showShop')->with('success', 'Data Disimpan');
+        }
+        else{
+            return redirect('/addToko')->with('error', 'Data yang ada masukkan salah.');
+        }
     }
 
     /**
@@ -55,9 +71,14 @@ class TokoOnlineController extends Controller
      * @param  \App\Models\TokoOnline  $tokoOnline
      * @return \Illuminate\Http\Response
      */
-    public function edit(TokoOnline $tokoOnline)
+    public function edit($id)
     {
-        //
+        $row = DB::table('toko_online')->where('id', $id)->first();
+        $dataToko = [
+            'dataToko'=>$row
+        ];
+
+        return view('onlineShop.editTokoForm', $dataToko);
     }
 
     /**
@@ -67,9 +88,19 @@ class TokoOnlineController extends Controller
      * @param  \App\Models\TokoOnline  $tokoOnline
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TokoOnline $tokoOnline)
+    public function update(Request $request)
     {
-        //
+        $request->validate([
+            'nama_toko'=> 'required',
+            'nama_platform'=> 'required',
+        ]);
+
+        $query = DB::table('toko_online')->where('id', $request->input('dataID'))
+            ->update([
+                'nama_toko'=>$request->input('nama_toko'),
+                'nama_platform'=>$request->input('nama_platform'),
+            ]);
+        return redirect('/showShop')->with('success', 'Data Diubah');
     }
 
     /**
@@ -78,8 +109,9 @@ class TokoOnlineController extends Controller
      * @param  \App\Models\TokoOnline  $tokoOnline
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TokoOnline $tokoOnline)
+    public function destroy($id)
     {
-        //
+        $delete = DB::table('toko_online')->where('id', $id)->delete();
+        return redirect('/showShop')->with('success', 'Data Dihapus');
     }
 }

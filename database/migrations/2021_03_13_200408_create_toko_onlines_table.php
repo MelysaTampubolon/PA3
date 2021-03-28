@@ -16,7 +16,7 @@ class CreateTokoOnlinesTable extends Migration
         Schema::create('toko_online', function (Blueprint $table) {
             $table->id();
             $table->string('nama_toko');
-            $table->string('nama_platfonm');
+            $table->string('nama_platform');
             $table->timestamps();
         });
     }

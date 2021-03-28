@@ -20,16 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e39b9a1-53d4-4274-a8bb-e50b377f2d61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/PekanKuy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PekanKuy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SupplierController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TokoOnlineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TokoOnlineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Supplier.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/TokoOnline.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TokoOnline.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_13_194054_create_supplier_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_13_194054_create_supplier_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_13_200408_create_toko_onlines_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_13_200408_create_toko_onlines_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_13_200837_create_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_13_200837_create_user_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/templateResources/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/templateResources/css/sb-admin-2.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/akun/akun.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/akun/akun.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/onlineShop/toko.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/onlineShop/toko.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sumberData/detailSumberData.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sumberData/detailSumberData.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/supplier/supplier.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/supplier/supplier.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/transaksi/transaksi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transaksi/transaksi.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +211,13 @@
       <workItem from="1615886539871" duration="24378000" />
       <workItem from="1615971368437" duration="601000" />
       <workItem from="1615997858601" duration="5276000" />
-      <workItem from="1616003837929" duration="3471000" />
+      <workItem from="1616003837929" duration="3566000" />
+      <workItem from="1616048897461" duration="600000" />
+      <workItem from="1616074616412" duration="10466000" />
+      <workItem from="1616264712446" duration="712000" />
+      <workItem from="1616382693283" duration="11281000" />
+      <workItem from="1616402737801" duration="1237000" />
+      <workItem from="1616945450475" duration="2042000" />
     </task>
     <servers />
   </component>
@@ -224,14 +237,19 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2326" y="150" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615630088410">
-      <screen x="1920" y="0" width="1280" height="720" />
+    <state x="406" y="150" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616385578916">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
+    <state x="406" y="150" key="#com.intellij.fileTypes.FileTypeChooser/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1616385578916" />
     <state x="2326" y="150" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720/1920.0.1280.720@1920.0.1280.720" timestamp="1615630088410" />
     <state x="2240" y="96" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1615614664644">
       <screen x="1920" y="0" width="1280" height="720" />
     </state>
     <state x="2240" y="96" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.720/1920.0.1280.720@1920.0.1280.720" timestamp="1615614664644" />
+    <state x="370" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616390296600">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="370" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1616390296600" />
     <state x="2377" y="270" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615896977837">
       <screen x="1920" y="0" width="1280" height="720" />
     </state>
