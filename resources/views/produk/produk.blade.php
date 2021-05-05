@@ -22,44 +22,44 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
+        @if($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>
+                    {{$message}}
+                </p>
+            </div>
+        @endif
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th>Kode Produk</th>
+                        <th style="width: 20px">#</th>
+                        <th style="width: 100px">Kode Produk</th>
                         <th>Nama Produk</th>
-                        <th>Stok</th>
-                        <th>Harga</th>
-                        <th>ID Sumber Data</th>
+                        <th style="width: 30px">Stok</th>
+                        <th style="width: 150px">Harga</th>
                         <th>Aksi</th>
                     </tr>
                     </thead>
-                    {{--                    <tfoot>--}}
-                    {{--                    <tr>--}}
-                    {{--                        <th>Nama File</th>--}}
-                    {{--                        <th>Tanggal Fetch Produk</th>--}}
-                    {{--                        <th>Supplier</th>--}}
-                    {{--                        <th>File Config</th>--}}
-                    {{--                        <th>Aksi</th>--}}
-                    {{--                    </tr>--}}
-                    {{--                    </tfoot>--}}
                     <tbody>
-                    <tr>
-                        <td>JT001BLK</td>
-                        <td>Alexandre Christie AC 6323 MC Black</td>
-                        <td>7</td>
-                        <td>RP. 1.137.000</td>
-                        <td>AC213</td>
-                        <td style="white-space: nowrap">
-                            <button href="" class="btn btn-danger">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                            <button href="" class="btn btn-info">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    @foreach($dataProduk as $row)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{$row -> id}}</td>
+                            <td>{{$row -> nama_produk}}</td>
+                            <td>{{$row -> stok}}</td>
+                            <td>RP. {{$row -> harga}}</td>
+                            <td style="white-space: nowrap">
+                                <button href="" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button href="" class="btn btn-info">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

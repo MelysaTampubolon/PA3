@@ -39,10 +39,10 @@
                         <form class="user" method="post" action="{{ url('addNewSupplier') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <input type="text" name="link" class="form-control form-control-user" id="exampleFirstName" placeholder="URL Toko">
+                                <input type="text" name="link" class="form-control form-control-user" id="exampleFirstName" placeholder="URL Toko" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="nama_toko" class="form-control form-control-user" id="exampleFirstName" placeholder="Nama Toko">
+                                <input type="text" name="nama_toko" class="form-control form-control-user" id="exampleFirstName" placeholder="Nama Toko" required>
                             </div>
                             <br><br><br>
                             <button type="submit" href="#" class="btn btn-primary btn-user btn-block">

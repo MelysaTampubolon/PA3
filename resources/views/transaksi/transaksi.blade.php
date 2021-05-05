@@ -22,6 +22,13 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
+        @if($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>
+                    {{$message}}
+                </p>
+            </div>
+        @endif
         <div class="card-body">
             <div class="table-responsive">
                 <a href="{{url('addJemaatTornagodang')}}" class="btn btn-primary btn-icon-split btn-sm float-right btnAdd">
@@ -33,6 +40,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
+                        <th>#</th>
                         <th>Kode Produk</th>
                         <th>Tanggal Transaksi</th>
                         <th>Harga</th>
@@ -42,21 +50,27 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($dataTransaksi as $row)
                     <tr>
-                        <td>JT001BLK</td>
-                        <td>2011/04/25</td>
-                        <td>RP. 1.137.000</td>
-                        <td>parJamTangan - Shopee</td>
+                        <td>{{ $loop -> iteration }}</td>
+                        <td>{{ $row -> product_id }}</td>
+                        <td>{{ $row -> tanggal_transaksi }}</td>
+                        <td>{{ $row -> harga }}</td>
+                        <td>{{ $row -> nama_toko}}</td>
                         <td>
-                            <div href="" class="btn btn-success" style="pointer-events: none">
-                                <i class="">Done</i>
-                            </div>
-{{--                            <div href="" class="btn btn-dark" style="pointer-events: none">--}}
-{{--                                <i class="">On Process</i>--}}
-{{--                            </div>--}}
-{{--                            <div href="" class="btn btn-danger" style="pointer-events: none">--}}
-{{--                                <i class="">Cancelled</i>--}}
-                            </div>
+                            @if($row->status == 'done')
+                                <div href="" class="btn btn-success" style="pointer-events: none">
+                                    <i class="">Done</i>
+                                </div>
+                            @elseif($row->status == 'on progress')
+                                <div href="" class="btn btn-dark" style="pointer-events: none">
+                                    <i class="">On Process</i>
+                                </div>
+                            @else
+                                <div href="" class="btn btn-danger" style="pointer-events: none">
+                                    <i class="">Cancelled</i>
+                                </div>
+                            @endif
                         </td>
                         <td style="white-space: nowrap">
                             <button href="" class="btn btn-danger">
@@ -67,6 +81,7 @@
                             </button>
                         </td>
                     </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

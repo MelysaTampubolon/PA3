@@ -31,41 +31,47 @@
                 <tr>
                     <th width="200px">ID Sumber Data</th>
                     <td>:</td>
-                    <td>JTAC213BLK</td>
+                    <td>{{ $dataRiwayat -> id }}</td>
                 </tr>
                 <tr>
                     <th>Tanggal Fetch Produk</th>
                     <td>:</td>
-                    <td>2011/04/25</td>
+                    <td>{{ $dataRiwayat -> tanggal_fetch }}</td>
                 </tr>
+                @foreach($otherData as $row)
+                    <tr>
+                        <th>Supplier</th>
+                        <td>:</td>
+                        <td>{{ $row -> nama_toko }}</td>
+                    </tr>
+                    <tr>
+                        <th>File Config</th>
+                        <td>:</td>
+                        <td>{{ $row -> nama_file }}</td>
+                    </tr>
+                    <tr>
+                        <th>Terakhir Diperbarui Oleh</th>
+                        <td>:</td>
+                        <td>{{ $row -> nama }}</td>
+                    </tr>
+                @endforeach
                 <tr>
-                    <th>Supplier</th>
-                    <td>:</td>
-                    <td>jamTangan.com</td>
-                </tr>
-                <tr>
-                    <th>File Config</th>
-                    <td>:</td>
-                    <td>jamTangan_detail.py</td>
-                </tr>
-                <tr>
-                    <th>Terakhir Diperbarui Oleh</th>
-                    <td>:</td>
-                    <td>Alvin Simbolon - admin</td>
-                </tr>
-                <tr>2
                     <th>Terakhir Diperbaharui</th>
                     <td>:</td>
-                    <td>2011/04/25</td>
+                    <td>{{ $dataRiwayat -> updated_at }}</td>
                 </tr>
                 <tr>
                     <th style="vertical-align: text-top">Deskripsi</th>
                     <td style="vertical-align: text-top">:</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Ad alias dolor doloribus esse est ex harum illum itaque modi nemo,
-                        perferendis quae, qui, quis quo rerum sapiente sequi vero vitae.</td>
+                    <td>{{ $dataRiwayat -> deskripsi }}</td>
                 </tr>
             </table>
+            <br>
+            <div class="" style="margin-left: 385px">
+                <a href="" class="btn btn-success" id="exportBtn">Download Format Tokopedia</a><br>
+                <a href="" class="btn btn-warning" id="exportBtn" style="margin-top: 5px;">Download Format Shopee</a><br>
+                <a href="" class="btn btn-danger" id="exportBtn" style="margin-top: 5px">Download Format BukaLapak</a>
+            </div>
             <br>
         </div>
     </div>

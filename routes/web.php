@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TokoOnlineController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\RiwayatFetchDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,7 @@ use App\Http\Controllers\SupplierController;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+Route::get('/', [PageController::class, 'index']);
 
 //Login
 Route::get('/login', [PageController::class, 'showLogin']);
@@ -29,7 +28,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 //Sumber Data
 Route::get('/sumberData', [PageController::class, 'showSumberData']);
-Route::get('/detailSumberData', [PageController::class, 'detailSumberData']);
+Route::get('/detailSumberData/{id}', [RiwayatFetchDataController::class, 'show']);
 
 //Produk
 Route::get('/showProduk', [PageController::class, 'showProduk']);

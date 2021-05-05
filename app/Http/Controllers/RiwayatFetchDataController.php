@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\RiwayatFetchData;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RiwayatFetchDataController extends Controller
 {
@@ -44,9 +45,16 @@ class RiwayatFetchDataController extends Controller
      * @param  \App\Models\RiwayatFetchData  $riwayatFetchData
      * @return \Illuminate\Http\Response
      */
-    public function show(RiwayatFetchData $riwayatFetchData)
+    public function show($id)
     {
-        //
+        $dataRiwayat = DB::table('riwayat_fetch_data')->find($id);
+        $otherData = DB::table('riwayat_fetch_data')->where('riwayat_fetch_data.id', '=', $id)
+            ->join('supplier', 'riwayat_fetch_data.supplier_id', '=', 'supplier.id')
+            ->join('file_config', 'riwayat_fetch_data.config_id', '=', 'file_config.id')
+            ->join('user', 'riwayat_fetch_data.user_id', '=', 'user.id')
+            ->select('supplier.nama_toko', 'file_config.nama_file', 'user.nama')->get();
+        return view('sumberData.detailSumberData', compact('dataRiwayat', 'otherData'));
+//        dd($otherData);
     }
 
     /**

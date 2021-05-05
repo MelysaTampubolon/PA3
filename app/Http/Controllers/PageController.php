@@ -20,6 +20,17 @@ class PageController extends Controller
         return view('login');
     }
 
+    public function index()
+    {
+        $soldAmnt = DB::table('transaksi')->where('status', '=', 'done')->sum('jumlah_produk');
+        $transactionAmnt = DB::table('transaksi')->get()->count();
+        $productAmnt = DB::table('product')->get()->count();
+        $supplierAmnt = DB::table('supplier')->get()->count();
+        $dataTransaksi = DB::table('transaksi')->get();
+        $dataSupplier = DB::table('supplier')->get();
+        return view('dashboard', compact('soldAmnt','transactionAmnt', 'productAmnt', 'supplierAmnt', 'dataTransaksi', 'dataSupplier'));
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -27,7 +38,14 @@ class PageController extends Controller
      */
     public function showSumberData()
     {
-        return view('sumberData.sumberData');
+//        $sumberData = DB::table('riwayat_fetch_data')->get();
+        $sumberData = DB::table('riwayat_fetch_data')
+            ->join('supplier', 'riwayat_fetch_data.supplier_id', '=', 'supplier.id')
+            ->join('file_config', 'riwayat_fetch_data.config_id', '=', 'file_config.id')
+            ->select('riwayat_fetch_data.id', 'riwayat_fetch_data.tanggal_fetch', 'supplier.nama_toko', 'file_config.nama_file')
+            ->get();
+
+        return view('sumberData.sumberData', compact('sumberData'));
     }
 
 
@@ -48,7 +66,8 @@ class PageController extends Controller
      */
     public function showProduk()
     {
-        return view('produk.produk');
+        $dataProduk = DB::table('product')->get();
+        return view('produk.produk', compact('dataProduk'));
     }
 
     /**
@@ -58,7 +77,11 @@ class PageController extends Controller
      */
     public function showTransaksi()
     {
-        return view('transaksi.transaksi');
+        $dataTransaksi = DB::table('transaksi')
+            ->join('toko_online', 'transaksi.toko_id', '=', 'toko_online.id')
+            ->select('transaksi.id', 'transaksi.product_id', 'transaksi.tanggal_transaksi', 'transaksi.harga', 'transaksi.status' ,'toko_online.nama_toko')
+            ->get();
+        return view('transaksi.transaksi', compact('dataTransaksi'));
     }
 
     /**
@@ -68,7 +91,8 @@ class PageController extends Controller
      */
     public function showConfig()
     {
-        return view('fileConfig.showConfig');
+        $dataConfig = DB::table('file_config')->get();
+        return view('fileConfig.showConfig', compact('dataConfig'));
     }
 
     /**

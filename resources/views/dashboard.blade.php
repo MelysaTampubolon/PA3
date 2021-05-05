@@ -22,7 +22,7 @@
                     <div class="col mr-2">
                         <div class="text-xs soldProduct text-uppercase mb-1">
                             Produk Terjual</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">341</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $soldAmnt }}</div>
                     </div>
                     <div class="col-auto">
                         <img src="{{url('icon/sold_icon_red.png')}}" class="cardIcon">
@@ -40,7 +40,7 @@
                     <div class="col mr-2">
                         <div class="text-xs transactionAmount text-uppercase mb-1">
                             Jumlah Transaksi</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">126</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $transactionAmnt }}</div>
                     </div>
                     <div class="col-auto">
                         <img src="{{url('icon/transactionCard_icon.png')}}" class="cardIcon">
@@ -58,7 +58,7 @@
                     <div class="col mr-2">
                         <div class="text-xs productAmount text-uppercase mb-1">
                             Jumlah Produk</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">1907</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $productAmnt }}</div>
                     </div>
                     <div class="col-auto">
                         <img src="{{url('icon/productCard_icon.png')}}" class="cardIcon">
@@ -76,7 +76,7 @@
                     <div class="col mr-2">
                         <div class="text-xs supplierAmount text-uppercase mb-1">
                             Jumlah Supplier</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">13</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $supplierAmnt }}</div>
                     </div>
                     <div class="col-auto">
                         <img src="{{url('icon/supplierCard_icon.png')}}" class="cardIcon">
@@ -89,81 +89,86 @@
 
 <!-- Content Row -->
 
-{{--<div class="row">--}}
+<div class="row">
 
-{{--    <!-- Area Chart -->--}}
-{{--    <div class="col-xl-8 col-lg-7">--}}
-{{--        <div class="card shadow mb-4">--}}
-{{--            <!-- Card Header - Dropdown -->--}}
-{{--            <div--}}
-{{--                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">--}}
-{{--                <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>--}}
-{{--                <div class="dropdown no-arrow">--}}
-{{--                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"--}}
-{{--                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>--}}
-{{--                    </a>--}}
-{{--                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"--}}
-{{--                         aria-labelledby="dropdownMenuLink">--}}
-{{--                        <div class="dropdown-header">Dropdown Header:</div>--}}
-{{--                        <a class="dropdown-item" href="#">Action</a>--}}
-{{--                        <a class="dropdown-item" href="#">Another action</a>--}}
-{{--                        <div class="dropdown-divider"></div>--}}
-{{--                        <a class="dropdown-item" href="#">Something else here</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <!-- Card Body -->--}}
-{{--            <div class="card-body">--}}
-{{--                <div class="chart-area">--}}
-{{--                    <canvas id="myAreaChart"></canvas>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    <!-- Area Chart -->
+    <div class="col-xl-8 col-lg-7">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div
+                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Transaksi Terkini</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <tr>
+                                <th>#</th>
+                                <th>Kode Produk</th>
+                                <th>Tanggal Transaksi</th>
+                                <th>Status</th>
+                            </tr>
+                        <tbody>
+                            @foreach($dataTransaksi as $row)
+                                <tr>
+                                    <td>{{ $loop -> iteration }}</td>
+                                    <td>{{ $row -> product_id }}</td>
+                                    <td>{{ $row -> tanggal_transaksi }}</td>
+                                    <td>
+                                        @if($row->status == 'done')
+                                            <div class="btn btn-success" style="pointer-events: none">
+                                                <i class="">Done</i>
+                                            </div>
+                                        @elseif($row->status == 'on progress')
+                                            <div class="btn btn-dark" style="pointer-events: none">
+                                                <i class="">On Process</i>
+                                            </div>
+                                        @else
+                                            <div class="btn btn-danger" style="pointer-events: none">
+                                                <i class="">Cancelled</i>
+                                            </div>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
-{{--    <!-- Pie Chart -->--}}
-{{--    <div class="col-xl-4 col-lg-5">--}}
-{{--        <div class="card shadow mb-4">--}}
-{{--            <!-- Card Header - Dropdown -->--}}
-{{--            <div--}}
-{{--                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">--}}
-{{--                <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>--}}
-{{--                <div class="dropdown no-arrow">--}}
-{{--                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"--}}
-{{--                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>--}}
-{{--                    </a>--}}
-{{--                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"--}}
-{{--                         aria-labelledby="dropdownMenuLink">--}}
-{{--                        <div class="dropdown-header">Dropdown Header:</div>--}}
-{{--                        <a class="dropdown-item" href="#">Action</a>--}}
-{{--                        <a class="dropdown-item" href="#">Another action</a>--}}
-{{--                        <div class="dropdown-divider"></div>--}}
-{{--                        <a class="dropdown-item" href="#">Something else here</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <!-- Card Body -->--}}
-{{--            <div class="card-body">--}}
-{{--                <div class="chart-pie pt-4 pb-2">--}}
-{{--                    <canvas id="myPieChart"></canvas>--}}
-{{--                </div>--}}
-{{--                <div class="mt-4 text-center small">--}}
-{{--                        <span class="mr-2">--}}
-{{--                            <i class="fas fa-circle text-primary"></i> Direct--}}
-{{--                        </span>--}}
-{{--                    <span class="mr-2">--}}
-{{--                            <i class="fas fa-circle text-success"></i> Social--}}
-{{--                        </span>--}}
-{{--                    <span class="mr-2">--}}
-{{--                            <i class="fas fa-circle text-info"></i> Referral--}}
-{{--                        </span>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
+    <!-- Pie Chart -->
+    <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div
+                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Supplier</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <tr>
+                            <th>#</th>
+                            <th>Nama Toko</th>
+                        </tr>
+                        <tbody>
+                        @foreach($dataSupplier as $row)
+                            <tr>
+                                <td>{{ $loop -> iteration }}</td>
+                                <td><a href="{{ $row -> link }}">{{ $row -> nama_toko }}</a></td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {{--<!-- Content Row -->--}}
 {{--<div class="row">--}}

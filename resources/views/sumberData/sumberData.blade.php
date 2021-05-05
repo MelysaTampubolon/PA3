@@ -22,9 +22,16 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
+        @if($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>
+                    {{$message}}
+                </p>
+            </div>
+        @endif
         <div class="card-body">
             <div class="table-responsive">
-                <a href="{{url('addJemaatTornagodang')}}" class="btn btn-primary btn-icon-split btn-sm float-right btnAdd">
+                <a href="{{url('addSumberData')}}" class="btn btn-primary btn-icon-split btn-sm float-right btnAdd">
                     <span class="icon text-white">
                         <i class="fas fa-plus"></i>
                     </span>
@@ -33,6 +40,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
+                        <th>#</th>
                         <th>ID Sumber Data</th>
                         <th>Tanggal Fetch Produk</th>
                         <th>Supplier</th>
@@ -41,21 +49,24 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                            <a href="{{url('/detailSumberData')}}">
-                                JTAC213BLK
-                            </a>
-                        </td>
-                        <td>2011/04/25</td>
-                        <td>jamTangan.com</td>
-                        <td>jamTangan_detail.py</td>
-                        <td>
-                            <button href="" class="btn btn-danger btn-user btn-block">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    @foreach($sumberData as $row)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>
+                                <a href="/detailSumberData/{{ $row->id }}">
+                                    {{ $row -> id }}
+                                </a>
+                            </td>
+                            <td>{{ $row -> tanggal_fetch }}</td>
+                            <td>{{ $row -> nama_toko }}</td>
+                            <td>{{ $row -> nama_file }}</td>
+                            <td>
+                                <button href="" class="btn btn-danger btn-user btn-block">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -8807,7 +8807,7 @@ button.bg-dark:hover {
     color: #fff !important;
 }
 .text-primary {
-    color: #4e73df !important;
+    color: #FFB895 !important;
 }
 a.text-primary:focus,
 a.text-primary:hover {
@@ -10438,4 +10438,8 @@ a.supplierAmount:hover {
 }
 .detailTable{
     border-spacing: 15px;
+}
+#exportBtn{
+    text-align: left;
+    width: 240px;
 }

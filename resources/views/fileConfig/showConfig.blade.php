@@ -22,6 +22,13 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
+        @if($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>
+                    {{$message}}
+                </p>
+            </div>
+        @endif
         <div class="card-body">
             <div class="table-responsive">
                 <a href="{{url('addJemaatTornagodang')}}" class="btn btn-primary btn-icon-split btn-sm float-right btnAdd">
@@ -33,6 +40,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
+                        <th>#</th>
                         <th>Nama File</th>
                         <th>ID Supplier</th>
                         <th>Jenis</th>
@@ -41,9 +49,11 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>jamTangan_detail.py</td>
-                        <td>JT01</td>
-                        <td>Detail</td>
+                        @foreach($dataConfig as $row)
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $row -> nama_file}}</td>
+                        <td>{{ $row->supplier_id }}</td>
+                        <td>{{ $row -> jenis }}</td>
                         <td style="white-space: nowrap">
                             <button href="" class="btn btn-danger">
                                 <i class="fas fa-trash"></i>
@@ -53,6 +63,7 @@
                             </button>
                         </td>
                     </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

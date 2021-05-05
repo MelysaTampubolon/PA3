@@ -18,14 +18,14 @@ class UserSeeder extends Seeder
             'username' => 'admin',
             'password' => 'pass123',
             'roles' => 'admin',
-            'name' => 'Alvin Simbolon',
+            'nama' => 'Alvin Simbolon',
         ]);
 
         DB::table('user')->insert([
             'username' => 'user1',
             'password' => 'pass123',
             'roles' => 'user',
-            'name' => 'Leonard Sihombing',
+            'nama' => 'Leonard Sihombing',
         ]);
     }
 }
