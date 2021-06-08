@@ -27,7 +27,7 @@
 
 <body id="page-top">
 
-{{--@if(\Illuminate\Support\Facades\Session::has('username'))--}}
+@if(\Illuminate\Support\Facades\Session::has('username'))
 
 @else
     <script>window.location = "/login";</script>
