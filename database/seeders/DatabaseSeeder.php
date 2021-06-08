@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
 //        $this->call(SupplierSeeder::class);
 //        $this->call(TokoOnlineSeeder::class);
 //        $this->call(ConfigSeeder::class);
-        $this->call(SumberDataSeeder::class);
-//        $this->call(ProductController::class);
+//        $this->call(SumberDataSeeder::class);
+        $this->call(ProdukSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }
