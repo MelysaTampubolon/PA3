@@ -27,11 +27,11 @@
 
 <body id="page-1top">
 
-{{--@if(Session::has('username'))--}}
+@if(Session::has('username'))
 
-{{--@else--}}
-{{--    <script>window.location = "/login";</script>--}}
-{{--@endif--}}
+@else
+    <script>window.location = "/login";</script>
+@endif
 
 <!-- Page Wrapper -->
 <div id="wrapper">
