@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e39b9a1-53d4-4274-a8bb-e50b377f2d61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_13_205218_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_13_205218_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,14 +168,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy\public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy\public\icon" />
       <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy" />
       <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy\resources\icon" />
       <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy\public\templateResources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Kuliah\Semester VI\PA 3\App\PekanKuy\public" />
     </key>
   </component>
   <component name="RunManager">
@@ -229,7 +228,7 @@
       <workItem from="1622852703655" duration="4124000" />
       <workItem from="1622862415626" duration="3203000" />
       <workItem from="1623072348552" duration="24185000" />
-      <workItem from="1623107836101" duration="4590000" />
+      <workItem from="1623107836101" duration="5257000" />
     </task>
     <servers />
   </component>
