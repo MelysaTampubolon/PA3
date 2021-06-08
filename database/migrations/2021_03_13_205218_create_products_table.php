@@ -15,8 +15,8 @@ class CreateProductsTable extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('riwayat_id');
-            $table->foreign('riwayat_id')->references('id')->on('riwayat_fetch_data');
+            $table->integer('riwayat_id');
+//            $table->foreign('riwayat_id')->references('id')->on('riwayat_fetch_data');
             $table->string('kategoriToped');
             $table->string('kategoriShopee');
             $table->string('kategoriBukaLapak');
