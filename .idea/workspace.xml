@@ -20,8 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e39b9a1-53d4-4274-a8bb-e50b377f2d61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_13_204440_create_file_configs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_13_204440_create_file_configs_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +227,7 @@
       <workItem from="1622852703655" duration="4124000" />
       <workItem from="1622862415626" duration="3203000" />
       <workItem from="1623072348552" duration="24185000" />
-      <workItem from="1623107836101" duration="9717000" />
+      <workItem from="1623107836101" duration="9833000" />
     </task>
     <servers />
   </component>

@@ -18,7 +18,6 @@ class CreateFileConfigsTable extends Migration
             $table->unsignedBigInteger('supplier_id');
             $table->foreign('supplier_id')->references('id')->on('supplier');
             $table->string('nama_file');
-            $table->string('jenis');
             $table->timestamps();
         });
     }
