@@ -16,21 +16,21 @@ class ProdukSeeder extends Seeder
     {
         DB::table('product')->insert([
             'id' => '1',
-            'riwayat_id  ' => '1',
+            'riwayat_id' => '1',
             'kategoriToped' => '2785',
-            'kategoriShopee ' => '27157',
-            'kategoriBukaLapak ' => '',
-            'kode_produk  ' => '',
+            'kategoriShopee' => '27157',
+            'kategoriBukaLapak' => '',
+            'kode_produk' => '',
             'url_produk' => 'https://www.whiskyshop.com/grey-goose-vodka-la-collection-4-x-5cl',
-            'nama_produk ' => 'Grey Goose Vodka La Collection 4 x 5cl',
-            'stok ' => '15',
-            'harga  ' => '313609',
-            'gambar ' => 'https://cdn.whiskyshop.com/pub/media/catalog/product/cache/917393f93da2b5d295a9e892fd6c1900/g/r/greygoose_lacollection_ps.jpg',
-            'deskripsi  ' => '',
+            'nama_produk' => 'Grey Goose Vodka La Collection 4 x 5cl',
+            'stok' => '15',
+            'harga ' => '313609',
+            'gambar' => 'https://cdn.whiskyshop.com/pub/media/catalog/product/cache/917393f93da2b5d295a9e892fd6c1900/g/r/greygoose_lacollection_ps.jpg',
+            'deskripsi ' => '',
             'berat' => '1000',
-            'waktuPreorder ' => '15',
-            'asuransi ' => 'Tidak',
-            'dummyColumn  ' => '',
+            'waktuPreorder' => '15',
+            'asuransi' => 'Tidak',
+            'dummyColumn ' => '',
         ]);
 
 
