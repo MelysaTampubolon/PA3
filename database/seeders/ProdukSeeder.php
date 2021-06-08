@@ -56,21 +56,21 @@ class ProdukSeeder extends Seeder
 
         DB::table('product')->insert([
             'id' => '3',
-            'riwayat_id  ' => '1',
+            'riwayat_id' => '1',
             'kategoriToped' => '2785',
-            'kategoriShopee ' => '27157',
-            'kategoriBukaLapak ' => '',
-            'kode_produk  ' => '',
+            'kategoriShopee' => '27157',
+            'kategoriBukaLapak' => '',
+            'kode_produk' => '',
             'url_produk' => 'https://www.whiskyshop.com/grey-goose-la-vanille-vodka',
-            'nama_produk ' => 'Grey Goose La Vanille Vodka',
-            'stok ' => '15',
-            'harga  ' => '714332',
-            'gambar ' => 'https://cdn.whiskyshop.com/pub/media/catalog/product/cache/917393f93da2b5d295a9e892fd6c1900/3/0/30603_b.jpg',
-            'deskripsi  ' => '',
+            'nama_produk' => 'Grey Goose La Vanille Vodka',
+            'stok' => '15',
+            'harga' => '714332',
+            'gambar' => 'https://cdn.whiskyshop.com/pub/media/catalog/product/cache/917393f93da2b5d295a9e892fd6c1900/3/0/30603_b.jpg',
+            'deskripsi' => '',
             'berat' => '1000',
-            'waktuPreorder ' => '15',
-            'asuransi ' => 'Tidak',
-            'dummyColumn  ' => '',
+            'waktuPreorder' => '15',
+            'asuransi' => 'Tidak',
+            'dummyColumn' => '',
         ]);
     }
 }
