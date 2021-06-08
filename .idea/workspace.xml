@@ -20,25 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e39b9a1-53d4-4274-a8bb-e50b377f2d61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExportToExcelController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FileConfigController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FileConfigController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RiwayatFetchDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RiwayatFetchDataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TransaksiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TransaksiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/RiwayatFetchData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/RiwayatFetchData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fileConfig/showConfig.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fileConfig/showConfig.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/produk/produk.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/produk/produk.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sumberData/detailSumberData.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sumberData/detailSumberData.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sumberData/sumberData.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sumberData/sumberData.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/supplier/supplier.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/supplier/supplier.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/transaksi/transaksi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transaksi/transaksi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_13_205218_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_13_205218_create_products_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +229,7 @@
       <workItem from="1622852703655" duration="4124000" />
       <workItem from="1622862415626" duration="3203000" />
       <workItem from="1623072348552" duration="24185000" />
-      <workItem from="1623107836101" duration="3142000" />
+      <workItem from="1623107836101" duration="4590000" />
     </task>
     <servers />
   </component>
