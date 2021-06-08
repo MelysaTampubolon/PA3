@@ -82,14 +82,14 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="{{url('templateResources/vendor/jquery/jquery.min.js')}}"></script>
-<script src="{{url('templateResources/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="templateResources/vendor/jquery/jquery.min.js"></script>
+<script src="templateResources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="{{url('templateResources/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+<script src="templateResources/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="{{url('templateResources/js/sb-admin-2.min.js')}}"></script>
+<script src="templateResources/js/sb-admin-2.min.js"></script>
 
 </body>
 
