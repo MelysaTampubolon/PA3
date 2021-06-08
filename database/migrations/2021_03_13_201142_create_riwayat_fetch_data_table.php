@@ -15,14 +15,14 @@ class CreateRiwayatFetchDataTable extends Migration
     {
         Schema::create('riwayat_fetch_data', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('supplier_id');
-            $table->foreign('supplier_id')->references('id')->on('supplier');
+            $table->integer('supplier_id');
+//            $table->foreign('supplier_id')->references('id')->on('supplier');
             $table->date('tanggal_fetch');
             $table->string('deskripsi');
-            $table->unsignedBigInteger('config_id');
-            $table->foreign('config_id')->references('id')->on('file_config');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->integer('config_id');
+//            $table->foreign('config_id')->references('id')->on('file_config');
+            $table->integer('user_id');
+//            $table->foreign('user_id')->references('id')->on('user');
             $table->timestamps();
         });
     }
