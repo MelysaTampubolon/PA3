@@ -15,11 +15,13 @@ class ConfigSeeder extends Seeder
     public function run()
     {
         DB::table('file_config')->insert([
+            'id' => '1',
             'supplier_id' => '1',
             'nama_file' => 'whiskyspider.py',
         ]);
 
         DB::table('file_config')->insert([
+            'id' => '2',
             'supplier_id' => '1',
             'nama_file' => 'vodka.py',
         ]);

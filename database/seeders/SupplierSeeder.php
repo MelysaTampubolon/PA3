@@ -15,6 +15,7 @@ class SupplierSeeder extends Seeder
     public function run()
     {
         DB::table('supplier')->insert([
+            'id' => '1',
             'link' => 'https://www.whiskyshop.com/',
             'nama_toko' => 'The Whisky Shop',
         ]);

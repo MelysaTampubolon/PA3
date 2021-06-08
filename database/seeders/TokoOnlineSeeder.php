@@ -15,6 +15,7 @@ class TokoOnlineSeeder extends Seeder
     public function run()
     {
         DB::table('toko_online')->insert([
+            'id' => '1',
             'nama_toko' => 'Toba Liquor',
             'nama_platform' => 'Tokopedia',
         ]);
