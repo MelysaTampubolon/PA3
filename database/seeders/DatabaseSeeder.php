@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TokoOnlineSeeder::class);
         $this->call(ConfigSeeder::class);
         $this->call(SumberDataSeeder::class);
+        $this->call(ProductController::class);
         // \App\Models\User::factory(10)->create();
     }
 }
