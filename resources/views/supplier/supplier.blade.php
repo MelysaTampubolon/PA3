@@ -28,7 +28,7 @@
                     {{$message}}
                 </p>
             </div>
-        @endif  
+        @endif
         <div class="card-body">
             <div class="table-responsive">
                 <a href="{{url('addSupplier')}}" class="btn btn-primary btn-icon-split btn-sm float-right btnAdd">
@@ -51,7 +51,7 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $row->nama_toko }}</td>
-                        <td>{{ $row->link }}</td>
+                        <td><a href="{{ $row->link }}">{{ $row->link }}</a></td>
                         <td style="white-space: nowrap">
                             <a href="" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal-{{$row->id}}">
                                 <i class="fas fa-trash"></i>

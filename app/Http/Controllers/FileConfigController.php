@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\FileConfig;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FileConfigController extends Controller
 {
@@ -24,7 +25,8 @@ class FileConfigController extends Controller
      */
     public function create()
     {
-        //
+        $getSupplier = DB::table('supplier')->get();
+        return view('fileConfig.addConfig', compact('getSupplier'));
     }
 
     /**
@@ -35,7 +37,22 @@ class FileConfigController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_file'=> 'required',
+            'id_supplier'=> 'required',
+        ]);
+
+        $query = DB::table('file_config')->insert([
+            'nama_file'=>$request->input('nama_file'),
+            'supplier_id'=>$request->input('id_supplier'),
+        ]);
+
+        if ($query){
+            return redirect('/showConfig')->with('success', 'Data Disimpan');
+        }
+        else{
+            return redirect('/addConfig')->with('error', 'Data yang ada masukkan salah.');
+        }
     }
 
     /**
@@ -55,9 +72,15 @@ class FileConfigController extends Controller
      * @param  \App\Models\FileConfig  $fileConfig
      * @return \Illuminate\Http\Response
      */
-    public function edit(FileConfig $fileConfig)
+    public function edit($id)
     {
-        //
+        $row = DB::table('file_config')->where('id', $id)->first();
+        $getSupplier = DB::table('supplier')->get();
+        $dataConfig = [
+            'dataConfig'=>$row
+        ];
+
+        return view('fileConfig.editConfig', compact('getSupplier'), $dataConfig);
     }
 
     /**
@@ -69,7 +92,17 @@ class FileConfigController extends Controller
      */
     public function update(Request $request, FileConfig $fileConfig)
     {
-        //
+        $request->validate([
+            'nama_file'=> 'required',
+            'id_supplier'=> 'required',
+        ]);
+
+        $query = DB::table('file_config')->where('id', $request->input('dataID'))
+            ->update([
+                'nama_file'=>$request->input('nama_file'),
+                'supplier_id'=>$request->input('id_supplier'),
+            ]);
+        return redirect('/showConfig')->with('success', 'Data Diubah');
     }
 
     /**
@@ -78,8 +111,9 @@ class FileConfigController extends Controller
      * @param  \App\Models\FileConfig  $fileConfig
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FileConfig $fileConfig)
+    public function destroy($id)
     {
-        //
+        $delete = DB::table('file_config')->where('id', $id)->delete();
+        return redirect('/showConfig')->with('success', 'Data Dihapus');
     }
 }

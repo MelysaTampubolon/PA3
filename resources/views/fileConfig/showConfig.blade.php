@@ -31,7 +31,7 @@
         @endif
         <div class="card-body">
             <div class="table-responsive">
-                <a href="{{url('addJemaatTornagodang')}}" class="btn btn-primary btn-icon-split btn-sm float-right btnAdd">
+                <a href="{{url('addConfig')}}" class="btn btn-primary btn-icon-split btn-sm float-right btnAdd">
                     <span class="icon text-white">
                         <i class="fas fa-plus"></i>
                     </span>
@@ -43,7 +43,6 @@
                         <th>#</th>
                         <th>Nama File</th>
                         <th>ID Supplier</th>
-                        <th>Jenis</th>
                         <th>Aksi</th>
                     </tr>
                     </thead>
@@ -53,16 +52,34 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $row -> nama_file}}</td>
                         <td>{{ $row->supplier_id }}</td>
-                        <td>{{ $row -> jenis }}</td>
                         <td style="white-space: nowrap">
-                            <button href="" class="btn btn-danger">
+                            <a href="" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal-{{$row->id}}">
                                 <i class="fas fa-trash"></i>
-                            </button>
-                            <button href="" class="btn btn-info">
+                            </a>
+                            <a href="editConfig/{{ $row->id }}" class="btn btn-info">
                                 <i class="fas fa-edit"></i>
-                            </button>
+                            </a>
                         </td>
                     </tr>
+
+                    <div class="modal fade" id="deleteModal-{{$row->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Hapus Data?</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Hapus {{$row->nama_file}}?</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                                    <a href="deleteConfig/{{ $row->id }}" class="btn btn-primary">Hapus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     @endforeach
                     </tbody>
                 </table>

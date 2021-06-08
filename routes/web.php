@@ -7,6 +7,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\TokoOnlineController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\RiwayatFetchDataController;
+use App\Http\Controllers\ExportController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\FileConfigController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,15 +33,33 @@ Route::get('/logout', [LoginController::class, 'logout']);
 //Sumber Data
 Route::get('/sumberData', [PageController::class, 'showSumberData']);
 Route::get('/detailSumberData/{id}', [RiwayatFetchDataController::class, 'show']);
+Route::get('/addSumberData', [RiwayatFetchDataController::class, 'create']);
+Route::post('/addNewData', [RiwayatFetchDataController::class, 'store']);
+Route::get('/deleteSumberData/{id}', [RiwayatFetchDataController::class, 'destroy']);
+Route::get('/exportToped', [ExportController::class, 'export']);
 
 //Produk
 Route::get('/showProduk', [PageController::class, 'showProduk']);
+Route::get('/deleteProduk/{id}', [ProductController::class, 'destroy']);
+Route::get('/editProduk/{id}', [ProductController::class, 'edit']);
+Route::post('/updateProduk/{id}', [ProductController::class, 'update']);
 
-//Produk
+//Transaksi
 Route::get('/showTransaksi', [PageController::class, 'showTransaksi']);
+Route::get('/addTransaksi', [TransaksiController::class, 'create']);
+Route::post('/addNewTransaction', [TransaksiController::class, 'store']);
+Route::get('/detailTransaksi/{id}', [TransaksiController::class, 'show']);
+Route::get('/deleteTransaksi/{id}', [TransaksiController::class, 'destroy']);
+Route::get('/editTransaksi/{id}', [TransaksiController::class, 'edit']);
+Route::post('/updateTransaksi/{id}', [TransaksiController::class, 'update']);
 
-//Produk
+//Config
 Route::get('/showConfig', [PageController::class, 'showConfig']);
+Route::get('/addConfig', [FileConfigController::class, 'create']);
+Route::post('/addNewConfig', [FileConfigController::class, 'store']);
+Route::get('/editConfig/{id}', [FileConfigController::class, 'edit']);
+Route::post('/updateConfig/{id}', [FileConfigController::class, 'update']);
+Route::get('/deleteConfig/{id}', [FileConfigController::class, 'destroy']);
 
 //Supplier
 Route::get('/showSupplier', [PageController::class, 'showSupplier']);
