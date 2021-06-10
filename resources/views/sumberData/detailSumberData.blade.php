@@ -68,8 +68,8 @@
             </table>
             <br>
             <div class="" style="margin-left: 385px">
-                <a href="/exportToped" class="btn btn-success" id="exportBtn">Download Format Tokopedia</a><br>
-                <a href="" class="btn btn-warning" id="exportBtn" style="margin-top: 5px;">Download Format Shopee</a><br>
+                <a href="/exportToped/{{ $dataRiwayat -> id }}" class="btn btn-success" id="exportBtn">Download Format Tokopedia</a><br>
+                <a href="/exportShopee/{{ $dataRiwayat -> id }}" class="btn btn-warning" id="exportBtn" style="margin-top: 5px;">Download Format Shopee</a><br>
                 <a href="" class="btn btn-danger" id="exportBtn" style="margin-top: 5px">Download Format BukaLapak</a>
             </div>
             <br>

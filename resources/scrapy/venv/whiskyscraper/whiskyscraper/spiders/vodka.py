@@ -1,7 +1,7 @@
 import scrapy
 import mysql.connector
 from scrapy import Selector
-from forex_python.converter import CurrencyRates
+from currency_converter import CurrencyConverter
 
 
 db = mysql.connector.connect(
@@ -12,15 +12,12 @@ db = mysql.connector.connect(
 )
 
 mycursor = db.cursor()
-curr = CurrencyRates
-# get_idr = curr.get_rate('EUR', 'IDR')
-# today = date.today()
-# curDate = today.strftime("%Y-%m-%d")
+c = CurrencyConverter()
 
 
 class WhiskeySpider(scrapy.Spider):
-    name = 'whisky'
-    start_urls = ['https://www.whiskyshop.com/scotch-whisky?item_availability=In+Stock']
+    name = 'vodka'
+    start_urls = ['https://www.whiskyshop.com/vodka?item_availability=In+Stock']
     # custom_settings = {"FEEDS": {"whisky.csv": {"format": "csv"}}}
 
     def parse(self, response):
@@ -33,8 +30,10 @@ class WhiskeySpider(scrapy.Spider):
             # history_id = get_id + 1
             if products.css('div.price-box::text').get() != 'Sold Out':
                 nama_item = products.css('a.product-item-link::text').get()
-                price = products.css('span.price::text').get().replace('£', '').replace(',', '').replace('.', '')
-                fix_price = float(price)
+                price = products.css('span.price::text').get().replace('£', '').replace(',', '')
+                round_price = round(float(price))
+                trim_price = str(round_price).split('.', 1)[0]
+                fix_price = c.convert(float(trim_price), 'EUR', 'IDR')
                 if products.css('img.product-image-photo').attrib['src'] is not '':
                     imgLink = products.css('img.product-image-photo').attrib['src']
                 else:

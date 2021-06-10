@@ -36,7 +36,8 @@ Route::get('/detailSumberData/{id}', [RiwayatFetchDataController::class, 'show']
 Route::get('/addSumberData', [RiwayatFetchDataController::class, 'create']);
 Route::post('/addNewData', [RiwayatFetchDataController::class, 'store']);
 Route::get('/deleteSumberData/{id}', [RiwayatFetchDataController::class, 'destroy']);
-Route::get('/exportToped', [ExportController::class, 'export']);
+Route::get('/exportToped/{id}', [ExportController::class, 'exportToped']);
+Route::get('/exportShopee/{id}', [ExportController::class, 'exportShopee']);
 
 //Produk
 Route::get('/showProduk', [PageController::class, 'showProduk']);

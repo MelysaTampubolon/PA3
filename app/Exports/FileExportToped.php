@@ -11,7 +11,7 @@ use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class FileExport implements FromQuery, ShouldAutoSize, WithHeadings
+class FileExportToped implements FromQuery, ShouldAutoSize, WithHeadings
 {
     use Exportable;
 
