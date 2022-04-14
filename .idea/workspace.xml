@@ -21,47 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e39b9a1-53d4-4274-a8bb-e50b377f2d61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exports/FileExport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exports/FileExportToped.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/Automat-20.2.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/Automat-20.2.0.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/Scrapy-2.5.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/Scrapy-2.5.0.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/Twisted-21.2.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/Twisted-21.2.0.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/pip-20.2.3.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/pip-20.2.3.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/setuptools-49.2.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Lib/site-packages/setuptools-49.2.1.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/automat-visualize.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/automat-visualize.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/cftp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/cftp.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/ckeygen.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/ckeygen.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/conch.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/conch.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/easy_install-3.9.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/easy_install-3.9.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/easy_install.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/easy_install.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/mailmail.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/mailmail.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/pip.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/pip3.9.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/pip3.9.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/pip3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/pip3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/pyhtmlizer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/pyhtmlizer.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/scrapy.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/scrapy.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/tkconch.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/tkconch.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/trial.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/trial.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/twist.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/twist.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/twistd.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/twistd.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/scrapy.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/.idea/whiskyshopscraper.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/scrapy/venv/Scripts/whiskyshopscraper/whiskyshopscraper/spiders/whiskyspider.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sumberData/detailSumberData.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sumberData/detailSumberData.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/onlineShop/editTokoForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/onlineShop/editTokoForm.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,10 +161,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/icon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../PercetakanMajalahHKBP" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -270,7 +230,39 @@
       <workItem from="1623072348552" duration="24185000" />
       <workItem from="1623107836101" duration="15142000" />
       <workItem from="1623213084226" duration="1986000" />
-      <workItem from="1623298465355" duration="5381000" />
+      <workItem from="1623298465355" duration="6810000" />
+      <workItem from="1623555516417" duration="11850000" />
+      <workItem from="1623600381859" duration="53000" />
+      <workItem from="1625646967988" duration="448000" />
+      <workItem from="1625653737926" duration="7080000" />
+      <workItem from="1625761093833" duration="4486000" />
+      <workItem from="1625934907612" duration="1914000" />
+      <workItem from="1625995613497" duration="4922000" />
+      <workItem from="1626017158421" duration="4685000" />
+      <workItem from="1626172504175" duration="41000" />
+      <workItem from="1626176623634" duration="3074000" />
+      <workItem from="1626234443340" duration="1366000" />
+      <workItem from="1626263533899" duration="1717000" />
+      <workItem from="1626355448219" duration="518000" />
+      <workItem from="1626858837128" duration="689000" />
+      <workItem from="1627225493576" duration="28000" />
+      <workItem from="1627976242023" duration="652000" />
+      <workItem from="1628049828546" duration="286000" />
+      <workItem from="1629791751438" duration="198000" />
+      <workItem from="1629792045005" duration="1504000" />
+      <workItem from="1630052117986" duration="815000" />
+      <workItem from="1632724937981" duration="1119000" />
+      <workItem from="1638721526674" duration="239000" />
+      <workItem from="1638942291829" duration="114000" />
+      <workItem from="1638972710615" duration="8595000" />
+      <workItem from="1639035787342" duration="30000" />
+      <workItem from="1639040576474" duration="2007000" />
+      <workItem from="1639059895500" duration="8506000" />
+      <workItem from="1639080680715" duration="1848000" />
+      <workItem from="1639194134699" duration="7420000" />
+      <workItem from="1640598286418" duration="756000" />
+      <workItem from="1640661367222" duration="8061000" />
+      <workItem from="1645418710116" duration="1808000" />
     </task>
     <servers />
   </component>
@@ -288,47 +280,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="406" y="150" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616385578916">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="406" y="150" key="#com.intellij.fileTypes.FileTypeChooser/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1616385578916" />
-    <state x="2326" y="150" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720/1920.0.1280.720@1920.0.1280.720" timestamp="1615630088410" />
-    <state x="444" y="28" key="#com.intellij.ide.util.MemberChooser" timestamp="1620277074710">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="444" y="28" key="#com.intellij.ide.util.MemberChooser/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1620277074710" />
-    <state x="320" y="96" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1620237544437">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="320" y="96" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1620237544437" />
-    <state x="2240" y="96" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.720/1920.0.1280.720@1920.0.1280.720" timestamp="1615614664644" />
-    <state x="333" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1623300474775">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="333" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1623300474775" />
-    <state x="370" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623125230334">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="370" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1623125230334" />
-    <state x="403" y="270" width="474" height="294" key="ComposerInitDialogKey" timestamp="1620214776675">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="403" y="270" width="474" height="294" key="ComposerInitDialogKey/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1620214776675" />
-    <state x="474" y="283" key="NewPhpFileDialog" timestamp="1623300503329">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="474" y="283" key="NewPhpFileDialog/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1623300503329" />
-    <state x="141" y="4" key="SettingsEditor" timestamp="1620273815086">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="141" y="4" key="SettingsEditor/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1620273815086" />
-    <state x="457" y="270" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623299898821">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="457" y="270" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.-219.1280.720/0.0.1280.720@0.0.1280.720" timestamp="1623299898821" />
-    <state x="2377" y="270" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720/1920.0.1280.720@1920.0.1280.720" timestamp="1615896977837" />
-    <state x="457" y="270" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1615805141746" />
   </component>
 </project>

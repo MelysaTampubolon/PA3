@@ -27,7 +27,7 @@
                         {{$message}}
                     </p>
                 </div>
-        @endif
+            @endif
         <!-- Nested Row within Card Body -->
             <div class="row">
                 <div class="col-lg-2"></div>
